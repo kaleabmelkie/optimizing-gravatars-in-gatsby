@@ -1,9 +1,9 @@
-import React from 'react'
+import React, { useMemo } from 'react'
 import { toUrl } from 'gatsby-source-gravatar'
 import GatsbyImage from 'gatsby-image'
 
 const Method1 = () => {
-  const url = toUrl(`email@example.com`)
+  const url = useMemo(() => toUrl(`email@example.com`), [])
 
   return (
     <GatsbyImage
