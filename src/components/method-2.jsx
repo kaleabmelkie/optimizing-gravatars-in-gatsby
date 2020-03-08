@@ -11,12 +11,13 @@ const Method2 = () => {
 export default Method2
 
 const query = graphql`
-  {
+  query Method2 {
     gravatar(email: { eq: "email@example.com" }) {
+      url
       localImage {
         childImageSharp {
           fluid {
-            ...GatsbyImageSharpFluid_withWebp
+            ...GatsbyImageSharpFluid_withWebp_tracedSVG
           }
         }
       }
